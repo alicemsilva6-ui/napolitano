@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .btnnav {
+            border-radius: 10%;
+            margin-left: 10px;
+            height: 30px;
+            width: 130px;
+            color: rgb(0, 0, 0);
+        }
+
+        .btnnav:hover {
+            background-color: lightpink;
+            color: aliceblue;
+        }
+
+        .btnfooter {
+            margin-left: 10px;
+            height: 50px;
+            width: 150px;
+            background-color: rgba(40, 24, 111, 0.092);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .btnfooter.hover {
+            background-color: rgb(250, 250, 210)
+        }
+        a{
+            text-decoration: none;
+        }
+        .card{
+            border: 1px lightpink solid;
+            color: black;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        /* o @media serve para alterar as propriedades das tags com base no tamnho do dispositivo
+para garantir a responsividade do site, temos que verificar como fica a estilização
+em varios tamnhos de telas diferentes, pode ser que no computador fique ok, porem quando acessado
+pelo celular o site quebre. Nesse caso será necessário aplicar ajustes no tamanho de tela com
+o @media()
+
+* Usamos o !important para forçar a estilização em uma tag, como a tag pode ter id e varias classes
+o html e css precisam saber qual estilo aplicar, forçamos isso usando o !important no final do atributo
+
+*/
+        @media(max-width:750px){
+            button{
+                width: 50px!important;
+                height: 30px!important;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+Semantica: é a parte linguistica que estuda o significado e sentidos das palavras!
+A partir da versão 5 do HTML , surgiram as tags semanticas que descrevem o significado
+das parte do seu site para o navegador e outros desenvolvedores entenderem!
+-->
+
+    <header
+        style="background-color: lightgoldenrodyellow;height: 10vh; display: flex;align-items: center;justify-content: center;">
+        <!--cabecalho da pagina -->
+
+        <nav style="display: flex;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbTJtDLGvxTm_L28eTIX3H0ee38UZ827y6pjlKZqA-CQ&s=10"
+                alt="" height="30px" width="50px">
+            <a href=""><button class="btnnav">Home</button></a>
+            <a href=""><button class="btnnav">Sobre Nos</button></a>
+            <a href=""><button class="btnnav">Trabelhe conosco</button></a>
+        </nav>
+
+    </header>
+
+    <main style="background-color: lightpink; height: 70vh;">
+        <!--Conteudo principal , é onde irão as informações do site em si -->
+
+        <section style="background-color: palevioletred;height: 40%;display: flex;
+        justify-content: center;align-items: center;flex-direction: column;"> <!--Section , é uma sessão da pagina aonde voce pode colocar um conteudo
+        Voce pode separar seu site em varias sessões !-->
+            <h1>NAPOLITANO</h1>
+            <p style="margin: 10px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At deserunt labore, 
+                sed soluta, aliquam pariatur id atque ducimus aperiam mollitia modi, 
+                ea non repudiandae accusamus quae autem! Illum, quo hic!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quaerat eum deleniti
+             quae corporis dicta, ipsum nostrum blanditiis similique natus sunt ducimus 
+            beatae ad quidem aliquam pariatur nam explicabo ab?</p>
+        </section>
+
+        <section style="background-color: lightyellow; height: 60%;display: flex;">
+             <div style="width: 50%; height: 100%; background-color: rgb(255, 255, 231);">
+                <div class="card">
+                    <h4>Gelato</h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVbFfRl4zModOIOQJrGcQoS0ALYOveGk59hCBjzQd_VtlVoNemHgIPaJFQ&s=10"
+                     alt="" height="120px" width="120px">
+                    <p>R$ 59,99</p>
+
+                </div>
+
+             </div>
+             <div style="width: 50%; height: 100%;background-color: lightgoldenrodyellow;">
+                <div class="card">
+                    <h4>Sorvete</h4>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBx_JoH0d8l6t5esWpxG-MLH2LwdaBAmuZahFlx46v_A&s alt="
+                     height="120px" width="120px">
+                    <p>R$ 29,99</p>
+
+                </div>
+
+             </div>
+        </section>
+
+    </main>
+
+    <footer style="background-color:sienna ; height: 20vh;display: flex;align-items: center;justify-content: center;">
+        <!--Footer , e o rodape da pagina -->
+        <nav style="display: flex; justify-content: center;align-items: center;">
+            <a href=""> <button class="btnfooter"> <img width="48" height="48"
+                        src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="instagram-new--v1" /> Instagram
+                </button> </a>
+            <a href=""> <button class="btnfooter"> <img width="48" height="48"
+                        src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1" /> TikTok </button> </a>
+            <a href=""> <button class="btnfooter"> <img width="48" height="48"
+                        src="https://img.icons8.com/3d-fluency/94/x.png" alt="x" /> X </button> </a>
+        </nav>
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>
